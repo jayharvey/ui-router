@@ -3883,11 +3883,11 @@ function $ViewDirective(   $state,   $injector,   $uiViewScroll,   $interpolate)
     if ($animate) {
       return {
         enter: function(element, target, cb) {
-          var promise = $animate.enter(element, null, target, cb);
+          var promise = $animate.enter(element, null, target);
           if (promise && promise.then) promise.then(cb);
         },
         leave: function(element, cb) {
-          var promise = $animate.leave(element, cb);
+          var promise = $animate.leave(element);
           if (promise && promise.then) promise.then(cb);
         }
       };
